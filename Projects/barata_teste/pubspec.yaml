@@ -1,0 +1,20 @@
+name: barata_teste
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.0
+
+flutter:
+  assets:
+    - assets/images/roach.png
+    - assets/images/slap.png
+    - assets/images/slipper.png
+    - assets/images/gun.png
+    - assets/images/missile.png
+    - assets/images/kitchen_floor.png
