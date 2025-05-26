@@ -1,5 +1,6 @@
 import 'package:aula001/app_controller.dart';
 import 'package:aula001/home_page.dart';
+import 'package:aula001/login_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -17,7 +18,11 @@ class AppWidget extends StatelessWidget {
             ? Brightness.dark 
             : Brightness.light,
           ),
-          home: HomePage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );
