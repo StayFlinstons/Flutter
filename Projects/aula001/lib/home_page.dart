@@ -1,5 +1,4 @@
 import 'package:aula001/app_controller.dart';
-import 'package:aula001/main.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
