@@ -1,0 +1,84 @@
+{
+  "geral": [
+    {
+      "question": "Qual é a capital da França?",
+      "options": ["Berlim", "Madri", "Paris", "Roma"],
+      "answer": "Paris",
+      "explanation": "Paris é a capital e cidade mais populosa da França."
+    },
+    {
+      "question": "Qual é o maior planeta do sistema solar?",
+      "options": ["Terra", "Marte", "Júpiter", "Saturno"],
+      "answer": "Júpiter",
+      "explanation": "Júpiter é o maior planeta do nosso sistema solar."
+    },
+    {
+      "question": "Em que ano o Brasil foi descoberto?",
+      "options": ["1498", "1500", "1502", "1504"],
+      "answer": "1500",
+      "explanation": "O Brasil foi descoberto pelos portugueses em 1500."
+    }
+  ],
+  "matematica": [
+    {
+      "question": "2 + 2 é igual a?",
+      "options": ["3", "4", "5", "6"],
+      "answer": "4",
+      "explanation": "2 + 2 = 4."
+    },
+    {
+      "question": "Qual é a raiz quadrada de 16?",
+      "options": ["2", "4", "6", "8"],
+      "answer": "4",
+      "explanation": "A raiz quadrada de 16 é 4, pois 4 × 4 = 16."
+    },
+    {
+      "question": "Quanto é 10% de 200?",
+      "options": ["10", "20", "30", "40"],
+      "answer": "20",
+      "explanation": "10% de 200 é 20 (200 × 0,1 = 20)."
+    }
+  ],
+  "historia": [
+    {
+      "question": "Quem foi o primeiro presidente do Brasil?",
+      "options": ["Getúlio Vargas", "Deodoro da Fonseca", "Juscelino Kubitschek", "Tancredo Neves"],
+      "answer": "Deodoro da Fonseca",
+      "explanation": "Deodoro da Fonseca foi o primeiro presidente do Brasil após a Proclamação da República."
+    },
+    {
+      "question": "Em que ano acabou a Segunda Guerra Mundial?",
+      "options": ["1943", "1944", "1945", "1946"],
+      "answer": "1945",
+      "explanation": "A Segunda Guerra Mundial terminou em 1945."
+    }
+  ],
+  "ciencia": [
+    {
+      "question": "Qual é o símbolo químico da água?",
+      "options": ["H2O", "CO2", "NaCl", "O2"],
+      "answer": "H2O",
+      "explanation": "H2O é a fórmula química da água (2 átomos de hidrogênio + 1 átomo de oxigênio)."
+    },
+    {
+      "question": "Quantos ossos tem o corpo humano adulto?",
+      "options": ["186", "206", "226", "246"],
+      "answer": "206",
+      "explanation": "O corpo humano adulto possui aproximadamente 206 ossos."
+    }
+  ],
+  "esportes": [
+    {
+      "question": "Quantos jogadores tem um time de futebol em campo?",
+      "options": ["9", "10", "11", "12"],
+      "answer": "11",
+      "explanation": "Cada time de futebol tem 11 jogadores em campo."
+    },
+    {
+      "question": "Em que esporte se usa o termo 'slam dunk'?",
+      "options": ["Vôlei", "Basquete", "Tênis", "Futebol"],
+      "answer": "Basquete",
+      "explanation": "Slam dunk é um termo usado no basquete para uma cesta feita com força."
+    }
+  ]
+}
