@@ -29,14 +29,11 @@ class _QuizGamePageState extends State<QuizGamePage> {
 
   Future<void> loadQuestions() async {
     try {
-      // Carrega o arquivo JSON
       String jsonString = await rootBundle.loadString('assets/questions.json');
       Map<String, dynamic> jsonData = json.decode(jsonString);
       
-      // Converte a categoria para minúscula para corresponder às chaves do JSON
       String categoryKey = widget.category.toLowerCase();
       
-      // Mapeia as categorias em português para as chaves do JSON
       Map<String, String> categoryMap = {
         'geral': 'geral',
         'história': 'historia',
@@ -49,7 +46,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
       
       List<dynamic> categoryQuestions = jsonData[jsonKey] ?? [];
       
-      // Embaralha as perguntas e pega apenas o número solicitado
       categoryQuestions.shuffle(Random());
       
       setState(() {
@@ -60,7 +56,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
         isLoading = false;
       });
     } catch (e) {
-      // Em caso de erro, usa perguntas padrão
       setState(() {
         questions = [
           {
@@ -97,7 +92,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
         answered = false;
         isCorrect = null;
       } else {
-        // Quiz finalizado
         showDialog(
           context: context,
           barrierDismissible: false,
@@ -107,24 +101,14 @@ class _QuizGamePageState extends State<QuizGamePage> {
             actions: [
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).pop(); // Fecha o dialog
-                  Navigator.of(context).pop(); // Volta para a tela anterior
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pop();
                 },
                 child: const Text('OK'),
               ),
             ],
           ),
         );
-      }
-    });
-  }
-
-  void previousQuestion() {
-    setState(() {
-      if (currentQuestionIndex > 0) {
-        currentQuestionIndex--;
-        answered = false;
-        isCorrect = null;
       }
     });
   }
@@ -166,12 +150,16 @@ class _QuizGamePageState extends State<QuizGamePage> {
             LinearProgressIndicator(
               value: (currentQuestionIndex + 1) / questions.length,
               backgroundColor: Colors.grey[300],
-              valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).primaryColor),
+              valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).colorScheme.primary),
             ),
             const SizedBox(height: 20),
             Text(
               question['question'],
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFFFFD700), // Amarelo temático
+              ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
@@ -195,7 +183,12 @@ class _QuizGamePageState extends State<QuizGamePage> {
                   border: Border.all(color: Colors.grey.shade400),
                 ),
                 child: ListTile(
-                  title: Text(opt),
+                  title: Text(
+                    opt,
+                    style: const TextStyle(
+                      color: Color(0xFFFFD700), // Amarelo temático para as alternativas
+                    ),
+                  ),
                   onTap: answered ? null : () => checkAnswer(opt),
                 ),
               );
@@ -236,12 +229,8 @@ class _QuizGamePageState extends State<QuizGamePage> {
             ],
             const Spacer(),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end, // Ajustado para alinhar à direita
               children: [
-                TextButton(
-                  onPressed: currentQuestionIndex > 0 ? previousQuestion : null,
-                  child: const Text('Anterior'),
-                ),
                 ElevatedButton(
                   onPressed: answered ? nextQuestion : null,
                   child: Text(

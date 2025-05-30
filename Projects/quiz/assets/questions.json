@@ -17,6 +17,102 @@
       "options": ["1498", "1500", "1502", "1504"],
       "answer": "1500",
       "explanation": "O Brasil foi descoberto pelos portugueses em 1500."
+    },
+    {
+      "question": "Qual é o maior oceano do mundo?",
+      "options": ["Atlântico", "Pacífico", "Índico", "Ártico"],
+      "answer": "Pacífico",
+      "explanation": "O Oceano Pacífico é o maior oceano do mundo."
+    },
+    {
+      "question": "Qual é o idioma mais falado no mundo?",
+      "options": ["Inglês", "Mandarim", "Espanhol", "Hindi"],
+      "answer": "Mandarim",
+      "explanation": "O Mandarim é o idioma mais falado, com mais de 1 bilhão de falantes nativos."
+    },
+    {
+      "question": "Qual é o metal cujo símbolo é Au?",
+      "options": ["Prata", "Cobre", "Ouro", "Ferro"],
+      "answer": "Ouro",
+      "explanation": "Au é o símbolo químico do ouro."
+    },
+    {
+      "question": "Quem escreveu 'Dom Quixote'?",
+      "options": ["Machado de Assis", "Miguel de Cervantes", "José de Alencar", "William Shakespeare"],
+      "answer": "Miguel de Cervantes",
+      "explanation": "Miguel de Cervantes é o autor de 'Dom Quixote'."
+    },
+    {
+      "question": "Qual é o país com o maior número de habitantes?",
+      "options": ["Índia", "Estados Unidos", "China", "Brasil"],
+      "answer": "China",
+      "explanation": "A China é o país mais populoso do mundo."
+    },
+    {
+      "question": "Qual é o menor continente do mundo?",
+      "options": ["Europa", "Antártida", "Oceania", "Ásia"],
+      "answer": "Oceania",
+      "explanation": "Oceania é o menor continente em área terrestre."
+    },
+    {
+      "question": "Quantos continentes existem na Terra?",
+      "options": ["5", "6", "7", "8"],
+      "answer": "7",
+      "explanation": "São sete continentes: Ásia, África, América do Norte, América do Sul, Europa, Oceania e Antártida."
+    },
+    {
+      "question": "Qual é o animal mais rápido do mundo?",
+      "options": ["Leão", "Guepardo", "Falcão-peregrino", "Tubarão"],
+      "answer": "Falcão-peregrino",
+      "explanation": "O falcão-peregrino atinge velocidades superiores a 300 km/h em mergulho."
+    },
+    {
+      "question": "Que país é conhecido como 'Terra do Sol Nascente'?",
+      "options": ["China", "Coreia do Sul", "Japão", "Tailândia"],
+      "answer": "Japão",
+      "explanation": "O Japão é conhecido como 'Terra do Sol Nascente'."
+    },
+    {
+      "question": "Qual é o maior deserto do mundo?",
+      "options": ["Sahara", "Atacama", "Deserto da Antártida", "Kalahari"],
+      "answer": "Deserto da Antártida",
+      "explanation": "O maior deserto do mundo é o da Antártida, por critérios de precipitação."
+    },
+    {
+      "question": "Qual é a capital da Espanha?",
+      "options": ["Lisboa", "Barcelona", "Madri", "Sevilha"],
+      "answer": "Madri",
+      "explanation": "Madri é a capital da Espanha."
+    },
+    {
+      "question": "Quem pintou a Mona Lisa?",
+      "options": ["Leonardo da Vinci", "Michelangelo", "Picasso", "Van Gogh"],
+      "answer": "Leonardo da Vinci",
+      "explanation": "A Mona Lisa foi pintada por Leonardo da Vinci."
+    },
+    {
+      "question": "Qual é o maior rio do mundo em extensão?",
+      "options": ["Amazonas", "Nilo", "Yangtzé", "Mississipi"],
+      "answer": "Nilo",
+      "explanation": "O Nilo é considerado o maior rio do mundo em extensão, embora haja debates com o Amazonas."
+    },
+    {
+      "question": "Qual é o elemento mais abundante no universo?",
+      "options": ["Hidrogênio", "Oxigênio", "Carbono", "Hélio"],
+      "answer": "Hidrogênio",
+      "explanation": "O hidrogênio é o elemento mais abundante no universo."
+    },
+    {
+      "question": "Em que país se encontra a Torre Eiffel?",
+      "options": ["Itália", "França", "Inglaterra", "Alemanha"],
+      "answer": "França",
+      "explanation": "A Torre Eiffel está localizada em Paris, França."
+    },
+    {
+      "question": "Qual é o planeta mais próximo do Sol?",
+      "options": ["Mercúrio", "Vênus", "Terra", "Marte"],
+      "answer": "Mercúrio",
+      "explanation": "Mercúrio é o planeta mais próximo do Sol."
     }
   ],
   "matematica": [
@@ -37,23 +133,110 @@
       "options": ["10", "20", "30", "40"],
       "answer": "20",
       "explanation": "10% de 200 é 20 (200 × 0,1 = 20)."
-    }
-  ],
-  "historia": [
-    {
-      "question": "Quem foi o primeiro presidente do Brasil?",
-      "options": ["Getúlio Vargas", "Deodoro da Fonseca", "Juscelino Kubitschek", "Tancredo Neves"],
-      "answer": "Deodoro da Fonseca",
-      "explanation": "Deodoro da Fonseca foi o primeiro presidente do Brasil após a Proclamação da República."
     },
     {
-      "question": "Em que ano acabou a Segunda Guerra Mundial?",
-      "options": ["1943", "1944", "1945", "1946"],
-      "answer": "1945",
-      "explanation": "A Segunda Guerra Mundial terminou em 1945."
+      "question": "Qual é o resultado de 17 + 8 - 3?",
+      "options": ["12", "22", "32", "46"],
+      "answer": "22",
+      "explanation": "17 + 8 - 3 = 22."
+    },
+    {
+      "question": "Qual é o resultado de 25% de 80?",
+      "options": ["15", "20", "25", "23"],
+      "answer": "20",
+      "explanation": "25% de 80 é 20 (80 × 0,25 = 20)."
+    },
+    {
+      "question": "Qual é a fórmula para calcular a área de um círculo?",
+      "options": ["A = π × r²", "A = b × h", "A = l × l", "A = 2 × π × r"],
+      "answer": "A = π × r²",
+      "explanation": "A área de um círculo é calculada pela fórmula A = π × r²."
+    },
+    {
+      "question": "Qual é o resultado de 6 × 8 + 2?",
+      "options": ["50", "44", "56", "63"],
+      "answer": "50",
+      "explanation": "6 × 8 = 48; 48 + 2 = 50."
+    },
+    {
+      "question": "Qual é o nome da figura geométrica que possui seis lados?",
+      "options": ["Octógono", "Pentágono", "Heptágono", "Hexágono"],
+      "answer": "Hexágono",
+      "explanation": "Um hexágono possui seis lados."
+    },
+    {
+      "question": "Qual é o nome da figura geométrica que possui quatro lados iguais e quatro ângulos retos?",
+      "options": ["Quadrado", "Triângulo", "Retângulo", "Losango"],
+      "answer": "Quadrado",
+      "explanation": "Um quadrado possui quatro lados iguais e quatro ângulos retos."
+    },
+    {
+      "question": "Qual é o nome da figura geométrica que possui nove lados?",
+      "options": ["Octógono", "Pentágono", "Heptágono", "Eneágono"],
+      "answer": "Eneágono",
+      "explanation": "Um eneágono possui nove lados."
+    },
+    {
+      "question": "Qual é a fórmula para calcular a circunferência de um círculo?",
+      "options": ["C = π × r²", "C = 2 × π × r", "C = (b + h) × 2", "C = l × 4"],
+      "answer": "C = 2 × π × r",
+      "explanation": "A circunferência de um círculo é calculada pela fórmula C = 2 × π × r."
+    },
+    {
+      "question": "Qual é o resultado da expressão 10 - 3 × 2?",
+      "options": ["1", "4", "7", "10"],
+      "answer": "4",
+      "explanation": "3 × 2 = 6; 10 - 6 = 4."
+    },
+    {
+      "question": "Qual é o número que está faltando na sequência: 2, 4, 6, __, 10?",
+      "options": ["7", "8", "9", "11"],
+      "answer": "8",
+      "explanation": "A sequência é de números pares. O número que falta é 8."
+    },
+    {
+      "question": "Quanto é 7 ao quadrado?",
+      "options": ["42", "49", "56", "64"],
+      "answer": "49",
+      "explanation": "7 ao quadrado é 7 × 7 = 49."
+    },
+    {
+      "question": "Qual é a metade de 180?",
+      "options": ["70", "80", "90", "100"],
+      "answer": "90",
+      "explanation": "A metade de 180 é 90."
+    },
+    {
+      "question": "Quanto é 12 dividido por 3?",
+      "options": ["2", "3", "4", "5"],
+      "answer": "4",
+      "explanation": "12 ÷ 3 = 4."
+    },
+    {
+      "question": "Se um produto custa R$ 50 e tem 20% de desconto, qual é o valor final?",
+      "options": ["40", "42", "45", "48"],
+      "answer": "40",
+      "explanation": "20% de 50 é 10, então 50 - 10 = 40."
+    },
+    {
+      "question": "Quantos segundos há em uma hora?",
+      "options": ["360", "600", "1800", "3600"],
+      "answer": "3600",
+      "explanation": "Uma hora tem 60 minutos e cada minuto tem 60 segundos: 60 × 60 = 3600."
+    },
+    {
+      "question": "Quanto é 5 fatorial (5!)?",
+      "options": ["60", "100", "120", "150"],
+      "answer": "120",
+      "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120."
+    },
+    {
+      "question": "Qual é o dobro de 75?",
+      "options": ["130", "140", "150", "160"],
+      "answer": "150",
+      "explanation": "O dobro de 75 é 150."
     }
-  ],
-  "ciencia": [
+  ],"ciencia": [
     {
       "question": "Qual é o símbolo químico da água?",
       "options": ["H2O", "CO2", "NaCl", "O2"],
@@ -65,9 +248,189 @@
       "options": ["186", "206", "226", "246"],
       "answer": "206",
       "explanation": "O corpo humano adulto possui aproximadamente 206 ossos."
+    },
+    {
+      "question": "Qual é o planeta mais próximo da Terra?",
+      "options": ["Vênus", "Marte", "Mercúrio", "Júpiter"],
+      "answer": "Vênus",
+      "explanation": "Vênus é considerado o planeta mais próximo da Terra em termos de distância média."
+    },
+    {
+      "question": "Qual é o gás mais abundante na atmosfera da Terra?",
+      "options": ["Oxigênio", "Hidrogênio", "Nitrogênio", "Gás carbônico"],
+      "answer": "Nitrogênio",
+      "explanation": "O nitrogênio compõe cerca de 78% da atmosfera da Terra."
+    },
+    {
+      "question": "Qual órgão do corpo humano é responsável por bombear o sangue?",
+      "options": ["Pulmões", "Coração", "Fígado", "Rins"],
+      "answer": "Coração",
+      "explanation": "O coração é o órgão que bombeia o sangue por todo o corpo."
+    },
+    {
+      "question": "Qual é o maior órgão do corpo humano?",
+      "options": ["Fígado", "Cérebro", "Pele", "Pulmão"],
+      "answer": "Pele",
+      "explanation": "A pele é o maior órgão do corpo humano, cobrindo toda a parte externa."
+    },
+    {
+      "question": "Quantos planetas fazem parte do Sistema Solar?",
+      "options": ["7", "8", "9", "10"],
+      "answer": "8",
+      "explanation": "O Sistema Solar possui 8 planetas oficialmente reconhecidos desde que Plutão foi reclassificado como planeta anão."
+    },
+    {
+      "question": "Qual é a unidade de medida da força?",
+      "options": ["Joule", "Newton", "Watt", "Pascal"],
+      "answer": "Newton",
+      "explanation": "A unidade de medida da força no Sistema Internacional é o Newton (N)."
+    },
+    {
+      "question": "Qual é o planeta conhecido como 'Planeta Vermelho'?",
+      "options": ["Vênus", "Júpiter", "Marte", "Saturno"],
+      "answer": "Marte",
+      "explanation": "Marte é conhecido como 'Planeta Vermelho' devido ao seu solo rico em óxido de ferro."
+    },
+    {
+      "question": "Qual desses animais é um mamífero?",
+      "options": ["Tubarão", "Golfinho", "Crocodilo", "Avestruz"],
+      "answer": "Golfinho",
+      "explanation": "Apesar de viver no mar, o golfinho é um mamífero."
+    },
+    {
+      "question": "Qual é o processo pelo qual as plantas produzem seu próprio alimento?",
+      "options": ["Fermentação", "Fotossíntese", "Respiração", "Digestão"],
+      "answer": "Fotossíntese",
+      "explanation": "A fotossíntese permite que as plantas produzam seu alimento usando luz solar."
+    },
+    {
+      "question": "Qual cientista formulou a Teoria da Relatividade?",
+      "options": ["Isaac Newton", "Galileu Galilei", "Albert Einstein", "Marie Curie"],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein desenvolveu a Teoria da Relatividade."
+    },
+    {
+      "question": "Que órgão é responsável pela respiração no ser humano?",
+      "options": ["Coração", "Estômago", "Pulmões", "Rins"],
+      "answer": "Pulmões",
+      "explanation": "Os pulmões são os órgãos responsáveis pela respiração."
+    },
+    {
+      "question": "Que instrumento é usado para medir a temperatura?",
+      "options": ["Bússola", "Termômetro", "Régua", "Barômetro"],
+      "answer": "Termômetro",
+      "explanation": "O termômetro é usado para medir a temperatura."
+    },
+    {
+      "question": "Qual planeta possui anéis mais visíveis no Sistema Solar?",
+      "options": ["Terra", "Marte", "Saturno", "Júpiter"],
+      "answer": "Saturno",
+      "explanation": "Saturno é famoso por seus anéis muito visíveis e brilhantes."
+    },
+    {
+      "question": "O que estuda a biologia?",
+      "options": ["Os astros", "A matéria", "Os seres vivos", "As rochas"],
+      "answer": "Os seres vivos",
+      "explanat": "Biologia é o estudo da biologia"
     }
-  ],
-  "esportes": [
+  ],"historia": [
+    {
+      "question": "Quem foi o primeiro presidente do Brasil?",
+      "options": ["Getúlio Vargas", "Deodoro da Fonseca", "Juscelino Kubitschek", "Tancredo Neves"],
+      "answer": "Deodoro da Fonseca",
+      "explanation": "Deodoro da Fonseca foi o primeiro presidente do Brasil após a Proclamação da República."
+    },
+    {
+      "question": "Em que ano acabou a Segunda Guerra Mundial?",
+      "options": ["1943", "1944", "1945", "1946"],
+      "answer": "1945",
+      "explanation": "A Segunda Guerra Mundial terminou em 1945."
+    },
+    {
+      "question": "Em que ano foi proclamada a Independência do Brasil?",
+      "options": ["1822", "1889", "1500", "1808"],
+      "answer": "1822",
+      "explanation": "O Brasil se tornou independente de Portugal em 7 de setembro de 1822."
+    },
+    {
+      "question": "Quem foi o líder dos alemães durante a Segunda Guerra Mundial?",
+      "options": ["Hitler", "Mussolini", "Churchill", "Stalin"],
+      "answer": "Hitler",
+      "explanation": "Adolf Hitler foi o líder da Alemanha nazista durante a Segunda Guerra Mundial."
+    },
+    {
+      "question": "Qual civilização construiu as pirâmides do Egito?",
+      "options": ["Maias", "Astecas", "Egípcios", "Romanos"],
+      "answer": "Egípcios",
+      "explanation": "As pirâmides foram construídas pelos antigos egípcios como túmulos para os faraós."
+    },
+    {
+      "question": "Quem foi o navegador que chegou ao Brasil em 1500?",
+      "options": ["Pedro Álvares Cabral", "Vasco da Gama", "Cristóvão Colombo", "Fernão de Magalhães"],
+      "answer": "Pedro Álvares Cabral",
+      "explanation": "Pedro Álvares Cabral liderou a frota portuguesa que chegou ao Brasil em 1500."
+    },
+    {
+      "question": "Qual foi a principal causa da Revolução Francesa?",
+      "options": ["Injustiça social", "Descoberta do Brasil", "Primeira Guerra Mundial", "Guerra Fria"],
+      "answer": "Injustiça social",
+      "explanation": "A desigualdade social, econômica e política levou à Revolução Francesa em 1789."
+    },
+    {
+      "question": "Quem foi o primeiro imperador do Brasil?",
+      "options": ["Dom João VI", "Dom Pedro I", "Dom Pedro II", "Getúlio Vargas"],
+      "answer": "Dom Pedro I",
+      "explanation": "Dom Pedro I foi o primeiro imperador do Brasil após a independência."
+    },
+    {
+      "question": "Qual país foi o berço da democracia?",
+      "options": ["Roma", "Egito", "Grécia", "China"],
+      "answer": "Grécia",
+      "explanation": "A democracia surgiu na Grécia Antiga, especialmente em Atenas."
+    },
+    {
+      "question": "Quem foi conhecido como 'Pai da Aviação'?",
+      "options": ["Wright Brothers", "Santos Dumont", "Leonardo da Vinci", "Thomas Edison"],
+      "answer": "Santos Dumont",
+      "explanation": "Santos Dumont é considerado o 'Pai da Aviação' por muitos, especialmente no Brasil, por seu voo com o 14-Bis."
+    },
+    {
+      "question": "Quando ocorreu a Proclamação da República no Brasil?",
+      "options": ["1888", "1889", "1822", "1922"],
+      "answer": "1889",
+      "explanation": "A Proclamação da República ocorreu em 15 de novembro de 1889."
+    },
+    {
+      "question": "Quem foi o líder do movimento de independência da Índia?",
+      "options": ["Nelson Mandela", "Mahatma Gandhi", "Martin Luther King", "Dalai Lama"],
+      "answer": "Mahatma Gandhi",
+      "explanation": "Mahatma Gandhi liderou a Índia na luta pacífica pela independência do Reino Unido."
+    },
+    {
+      "question": "Em que continente se desenvolveu o Império Romano?",
+      "options": ["Ásia", "África", "Europa", "América"],
+      "answer": "Europa",
+      "explanation": "O Império Romano se desenvolveu principalmente na Europa."
+    },
+    {
+      "question": "Que evento marcou o fim da Idade Média?",
+      "options": ["Queda de Roma", "Descobrimento da América", "Queda de Constantinopla", "Revolução Industrial"],
+      "answer": "Queda de Constantinopla",
+      "explanation": "A Queda de Constantinopla em 1453 é considerada o fim da Idade Média."
+    },
+    {
+      "question": "Quem foi o responsável pela abolição da escravatura no Brasil?",
+      "options": ["Dom Pedro II", "Princesa Isabel", "Getúlio Vargas", "Juscelino Kubitschek"],
+      "answer": "Princesa Isabel",
+      "explanation": "A Princesa Isabel assinou a Lei Áurea, que aboliu oficialmente a escravidão no Brasil em 1888."
+    },
+    {
+      "question": "Em que ano foi derrubado o Muro de Berlim?",
+      "options": ["1985", "1987", "1989", "1991"],
+      "answer": "1989",
+      "explanation": "O Muro de Berlim foi derrubado em 1989, marcando o fim da Guerra Fria na Europa."
+    }
+  ],"esportes": [
     {
       "question": "Quantos jogadores tem um time de futebol em campo?",
       "options": ["9", "10", "11", "12"],
@@ -79,6 +442,92 @@
       "options": ["Vôlei", "Basquete", "Tênis", "Futebol"],
       "answer": "Basquete",
       "explanation": "Slam dunk é um termo usado no basquete para uma cesta feita com força."
+    },
+    {
+      "question": "Quantos pontos vale um gol no futebol?",
+      "options": ["1", "2", "3", "5"],
+      "answer": "1",
+      "explanation": "Cada gol no futebol vale 1 ponto."
+    },
+    {
+      "question": "Em que país se originou o judô?",
+      "options": ["China", "Japão", "Coreia", "Tailândia"],
+      "answer": "Japão",
+      "explanation": "O judô foi criado no Japão por Jigoro Kano."
+    },
+    {
+      "question": "Quantos anéis há na bandeira olímpica?",
+      "options": ["3", "4", "5", "6"],
+      "answer": "5",
+      "explanation": "Os cinco anéis representam os cinco continentes participantes dos Jogos Olímpicos."
+    },
+    {
+      "question": "Qual país venceu a Copa do Mundo de Futebol mais vezes?",
+      "options": ["Alemanha", "Itália", "Brasil", "Argentina"],
+      "answer": "Brasil",
+      "explanation": "O Brasil é o país que mais venceu Copas do Mundo, com 5 títulos."
+    },
+    {
+      "question": "Em que esporte é comum o uso da raquete?",
+      "options": ["Tênis", "Futebol", "Natação", "Atletismo"],
+      "answer": "Tênis",
+      "explanation": "O tênis é jogado com raquetes e bolas."
+    },
+    {
+      "question": "Quantos sets são necessários para vencer uma partida de vôlei?",
+      "options": ["2", "3", "4", "5"],
+      "answer": "3",
+      "explanation": "O time que vencer 3 sets vence a partida de vôlei."
+    },
+    {
+      "question": "Em qual esporte se utiliza uma bola oval?",
+      "options": ["Futebol", "Basquete", "Rugby", "Tênis"],
+      "answer": "Rugby",
+      "explanation": "O rugby utiliza uma bola oval, diferente dos outros esportes."
+    },
+    {
+      "question": "O que é um 'strike' no boliche?",
+      "options": ["Derrubar alguns pinos", "Errar todos os pinos", "Derrubar todos os pinos", "Empatar o jogo"],
+      "answer": "Derrubar todos os pinos",
+      "explanation": "No boliche, um 'strike' é quando o jogador derruba todos os pinos em uma só jogada."
+    },
+    {
+      "question": "Em que cidade ocorreram os Jogos Olímpicos de 2016?",
+      "options": ["Londres", "Tóquio", "Pequim", "Rio de Janeiro"],
+      "answer": "Rio de Janeiro",
+      "explanation": "Os Jogos Olímpicos de 2016 aconteceram no Rio de Janeiro, Brasil."
+    },
+    {
+      "question": "Qual piloto é conhecido como heptacampeão da Fórmula 1?",
+      "options": ["Ayrton Senna", "Lewis Hamilton", "Michael Schumacher", "Max Verstappen"],
+      "answer": "Michael Schumacher",
+      "explanation": "Michael Schumacher conquistou 7 títulos mundiais na Fórmula 1."
+    },
+    {
+      "question": "Qual é o nome do maior torneio de tênis do mundo na grama?",
+      "options": ["Roland Garros", "US Open", "Wimbledon", "Australian Open"],
+      "answer": "Wimbledon",
+      "explanation": "Wimbledon é o mais famoso torneio de tênis disputado na grama."
+    },
+    {
+      "question": "O Maracanã é um estádio localizado em qual cidade?",
+      "options": ["São Paulo", "Rio de Janeiro", "Brasília", "Belo Horizonte"],
+      "answer": "Rio de Janeiro",
+      "explanation": "O Estádio do Maracanã fica localizado no Rio de Janeiro, Brasil."
+    },
+    {
+      "question": "Qual país é o atual recordista de medalhas olímpicas no geral?",
+      "options": ["Rússia", "China", "Reino Unido", "Estados Unidos"],
+      "answer": "Estados Unidos",
+      "explanation": "Os Estados Unidos são os maiores vencedores em número de medalhas na história das Olimpíadas."
+    },
+    {
+      "question": "Qual é o esporte praticado na Fórmula 1?",
+      "options": ["Atletismo", "Automobilismo", "Ciclismo", "Natação"],
+      "answer": "Automobilismo",
+      "explanation": "A Fórmula 1 é uma modalidade de automobilismo, envolvendo corridas de carros."
     }
   ]
-}
+} 
+
+
