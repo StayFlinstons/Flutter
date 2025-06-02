@@ -158,7 +158,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
               style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFD700), // Amarelo temático
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
               textAlign: TextAlign.center,
             ),
@@ -186,7 +186,8 @@ class _QuizGamePageState extends State<QuizGamePage> {
                   title: Text(
                     opt,
                     style: const TextStyle(
-                      color: Color(0xFFFFD700), // Amarelo temático para as alternativas
+                      color:  Color(0xFF0A1A2C),
+                      fontSize: 20
                     ),
                   ),
                   onTap: answered ? null : () => checkAnswer(opt),
@@ -220,7 +221,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
                     const SizedBox(height: 8),
                     Text(
                       question['explanation'],
-                      style: const TextStyle(color: Colors.black54),
+                      style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -229,12 +230,17 @@ class _QuizGamePageState extends State<QuizGamePage> {
             ],
             const Spacer(),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end, // Ajustado para alinhar à direita
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ElevatedButton(
-                  onPressed: answered ? nextQuestion : null,
-                  child: Text(
-                    currentQuestionIndex == questions.length - 1 ? 'Finalizar' : 'Próxima'
+                SizedBox(
+                  width: 150,
+                  height: 60,
+                  child: ElevatedButton(
+                    onPressed: answered ? nextQuestion : null,
+                    child: Text(
+                      currentQuestionIndex == questions.length - 1 ? 'Finalizar' : 'Próxima',
+                      style: const TextStyle(fontSize: 18), // Aumenta a fonte
+                    ),
                   ),
                 ),
               ],

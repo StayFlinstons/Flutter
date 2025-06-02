@@ -15,7 +15,7 @@ class _QuizModeSelectionPageState extends State<QuizModeSelectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(), // Remove o título do AppBar
+      appBar: AppBar(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -28,7 +28,7 @@ class _QuizModeSelectionPageState extends State<QuizModeSelectionPage> {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFFFD700), // Amarelo temático
+                  color: Color(0xFFFFD700),
                 ),
               ),
               const SizedBox(height: 30),
@@ -52,16 +52,23 @@ class _QuizModeSelectionPageState extends State<QuizModeSelectionPage> {
                     .toList(),
               ),
               const SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (_) => QuizGamePage(
-                      category: selectedCategory,
-                      totalQuestions: selectedQuestions,
-                    ),
-                  ));
-                },
-                child: const Text('Iniciar Quiz'),
+              SizedBox(
+                width: 150,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (_) => QuizGamePage(
+                        category: selectedCategory,
+                        totalQuestions: selectedQuestions,
+                      ),
+                    ));
+                  },
+                  child: const Text(
+                    'Iniciar Quiz',
+                    style: TextStyle(fontSize: 18), // Aumenta a fonte
+                  ),
+                ),
               ),
             ],
           ),

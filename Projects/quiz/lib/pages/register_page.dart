@@ -23,14 +23,12 @@ class _RegisterPageState extends State<RegisterPage> {
       _isLoading = true;
     });
 
-    // Simula um atraso para dar feedback visual
     await Future.delayed(const Duration(seconds: 1));
 
     final username = _usernameController.text;
     final email = _emailController.text;
     final password = _passwordController.text;
 
-    // Verifica se o email já está registrado
     final prefs = await SharedPreferences.getInstance();
     final existingEmail = prefs.getString('registeredEmail');
 
@@ -44,17 +42,14 @@ class _RegisterPageState extends State<RegisterPage> {
       return;
     }
 
-    // Salva os dados do usuário no SharedPreferences
     await prefs.setString('registeredUsername', username);
     await prefs.setString('registeredEmail', email);
     await prefs.setString('registeredPassword', password);
 
-    // Exibe mensagem de sucesso
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Registro realizado com sucesso!')),
     );
 
-    // Redireciona para a tela de login
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (_) => const LoginPage()),
@@ -123,19 +118,33 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 20),
               _isLoading
                   ? const CircularProgressIndicator()
-                  : ElevatedButton(
-                      onPressed: _register,
-                      child: const Text('Registrar'),
+                  : SizedBox(
+                      width: 150,
+                      height: 60,
+                      child: ElevatedButton(
+                        onPressed: _register,
+                        child: const Text(
+                          'Registrar',
+                          style: TextStyle(fontSize: 18), // Aumenta a fonte
+                        ),
+                      ),
                     ),
               const SizedBox(height: 10),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => const LoginPage()),
-                  );
-                },
-                child: const Text('Registrar com Google'),
+              SizedBox(
+                width: 150,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const LoginPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Registrar com Google',
+                    style: TextStyle(fontSize: 18), // Aumenta a fonte
+                  ),
+                ),
               ),
             ],
           ),

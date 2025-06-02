@@ -27,13 +27,11 @@ class _LoginPageState extends State<LoginPage> {
     final email = _emailController.text;
     final password = _passwordController.text;
 
-    // Carrega as credenciais registradas
     final prefs = await SharedPreferences.getInstance();
     final registeredEmail = prefs.getString('registeredEmail');
     final registeredPassword = prefs.getString('registeredPassword');
     final registeredUsername = prefs.getString('registeredUsername') ?? 'Usuário';
 
-    // Credenciais fixas como fallback
     const String validEmail = 'teste@teste.com';
     const String validPassword = '123456';
     const String validUsername = 'Usuário Teste';
@@ -41,14 +39,12 @@ class _LoginPageState extends State<LoginPage> {
     bool isValid = false;
     String userName = registeredUsername;
 
-    // Verifica primeiro as credenciais registradas
     if (registeredEmail != null && registeredPassword != null) {
       if (email == registeredEmail && password == registeredPassword) {
         isValid = true;
       }
     }
 
-    // Se não houver credenciais registradas ou não forem válidas, verifica as fixas
     if (!isValid) {
       if (email == validEmail && password == validPassword) {
         isValid = true;
@@ -57,7 +53,6 @@ class _LoginPageState extends State<LoginPage> {
     }
 
     if (isValid) {
-      // Salva o nome do usuário para uso na QuizHomePage
       await prefs.setString('userName', userName);
       await prefs.setString('userEmail', email);
 
@@ -120,19 +115,33 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               _isLoading
                   ? const CircularProgressIndicator()
-                  : ElevatedButton(
-                      onPressed: _login,
-                      child: const Text('Login'),
+                  : SizedBox(
+                      width: 150,
+                      height: 60,
+                      child: ElevatedButton(
+                        onPressed: _login,
+                        child: const Text(
+                          'Login',
+                          style: TextStyle(fontSize: 18), // Aumenta a fonte
+                        ),
+                      ),
                     ),
               const SizedBox(height: 10),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => const QuizHomePage(userName: "Usuário Google")),
-                  );
-                },
-                child: const Text('Login com Google'),
+              SizedBox(
+                width: 150,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const QuizHomePage(userName: "Usuário Google")),
+                    );
+                  },
+                  child: const Text(
+                    'Login com Google',
+                    style: TextStyle(fontSize: 18), // Aumenta a fonte
+                  ),
+                ),
               ),
             ],
           ),
