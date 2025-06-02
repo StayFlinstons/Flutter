@@ -32,54 +32,57 @@ class _QuizHomePageState extends State<QuizHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Bem-vindo, $userName')),
-      body: Container(
-        color: const Color(0xFF0A1A2C),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(height: 20),
-            Image.asset(
-              'assets/show_do_ismael.png',
-              width: 200,
-              height: 200,
-              fit: BoxFit.contain,
-            ),
-            const SizedBox(height: 40),
-            SizedBox(
-              width: 150,
-              height: 60,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const QuizModeSelectionPage()),
-                  );
-                },
-                child: const Text(
-                  'Jogar',
-                  style: TextStyle(fontSize: 18), // Aumenta a fonte
+      body: Center(
+        child: Container(
+          color: const Color(0xFF0A1A2C),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/show_do_ismael.png',
+                width: 400,
+                height: 400,
+                fit: BoxFit.contain,
+              ),
+              const SizedBox(height: 40),
+              SizedBox(
+                width: 150,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const QuizModeSelectionPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Jogar',
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            SizedBox(
-              width: 150,
-              height: 60,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const RankingPage()),
-                  );
-                },
-                child: const Text(
-                  'Ranking',
-                  style: TextStyle(fontSize: 18), // Aumenta a fonte
+              const SizedBox(height: 20),
+              SizedBox(
+                width: 150,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const RankingPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Ranking',
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
