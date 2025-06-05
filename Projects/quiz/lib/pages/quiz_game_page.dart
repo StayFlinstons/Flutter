@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'dart:math';
 
@@ -18,6 +19,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
   int score = 0;
   bool? isCorrect;
   bool answered = false;
+  String? selectedOption;
   List<Map<String, dynamic>> questions = [];
   bool isLoading = true;
 
@@ -29,12 +31,10 @@ class _QuizGamePageState extends State<QuizGamePage> {
 
   Future<void> loadQuestions() async {
     try {
-      String jsonString = await rootBundle.loadString('assets/questions.json');
-      Map<String, dynamic> jsonData = json.decode(jsonString);
+      final jsonString = await rootBundle.loadString('assets/questions.json');
+      final jsonData = json.decode(jsonString);
       
-      String categoryKey = widget.category.toLowerCase();
-      
-      Map<String, String> categoryMap = {
+      final categoryMap = {
         'geral': 'geral',
         'história': 'historia',
         'ciência': 'ciencia',
@@ -42,9 +42,8 @@ class _QuizGamePageState extends State<QuizGamePage> {
         'matemática': 'matematica',
       };
       
-      String jsonKey = categoryMap[categoryKey] ?? 'geral';
-      
-      List<dynamic> categoryQuestions = jsonData[jsonKey] ?? [];
+      final jsonKey = categoryMap[widget.category.toLowerCase()] ?? 'geral';
+      final List<dynamic> categoryQuestions = jsonData[jsonKey] ?? [];
       
       categoryQuestions.shuffle(Random());
       
@@ -56,6 +55,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
         isLoading = false;
       });
     } catch (e) {
+      // Mantém a lógica de fallback
       setState(() {
         questions = [
           {
@@ -80,9 +80,17 @@ class _QuizGamePageState extends State<QuizGamePage> {
   void checkAnswer(String selected) {
     setState(() {
       answered = true;
+      selectedOption = selected;
       isCorrect = selected == questions[currentQuestionIndex]['answer'];
       if (isCorrect!) score++;
     });
+  }
+
+  Future<void> _saveScore(String userName, int score) async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String> scoresString = prefs.getStringList('ranking_scores') ?? [];
+    scoresString.add(json.encode({'name': userName, 'score': score}));
+    await prefs.setStringList('ranking_scores', scoresString);
   }
 
   void nextQuestion() {
@@ -91,23 +99,40 @@ class _QuizGamePageState extends State<QuizGamePage> {
         currentQuestionIndex++;
         answered = false;
         isCorrect = null;
+        selectedOption = null;
       } else {
         showDialog(
           context: context,
           barrierDismissible: false,
-          builder: (context) => AlertDialog(
-            title: const Text('Quiz Finalizado!'),
-            content: Text('Você acertou $score de ${questions.length} perguntas!'),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).pop();
-                },
-                child: const Text('OK'),
-              ),
-            ],
-          ),
+          builder: (context) {
+            return FutureBuilder<SharedPreferences>(
+              future: SharedPreferences.getInstance(),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                
+                final prefs = snapshot.data!;
+                final userName = prefs.getString('userName') ?? 'Usuário';
+
+                return AlertDialog(
+                  title: const Text('Quiz Finalizado!'),
+                  content: Text('Você acertou $score de ${questions.length} perguntas!'),
+                  actions: [
+                    TextButton(
+                      onPressed: () async {
+                        await _saveScore(userName, score);
+                        // O pop duplo fecha o dialog e a tela do quiz
+                        Navigator.of(context).pop();
+                        Navigator.of(context).pop();
+                      },
+                      child: const Text('OK'),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
         );
       }
     });
@@ -158,7 +183,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
               style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Colors.white,
               ),
               textAlign: TextAlign.center,
             ),
@@ -167,7 +192,9 @@ class _QuizGamePageState extends State<QuizGamePage> {
               Color? backgroundColor;
               if (answered) {
                 if (opt == question['answer']) {
-                  backgroundColor = Colors.green.withOpacity(0.6);
+                  backgroundColor = const Color.fromARGB(255, 109, 253, 114).withOpacity(0.6);
+                } else if (opt == selectedOption && !isCorrect!) {
+                  backgroundColor = const Color.fromARGB(255, 248, 36, 20).withOpacity(0.6);
                 } else {
                   backgroundColor = Colors.grey.shade300;
                 }
@@ -186,8 +213,8 @@ class _QuizGamePageState extends State<QuizGamePage> {
                   title: Text(
                     opt,
                     style: const TextStyle(
-                      color:  Color(0xFF0A1A2C),
-                      fontSize: 20
+                      color: Color(0xFF0A1A2C),
+                      fontSize: 20,
                     ),
                   ),
                   onTap: answered ? null : () => checkAnswer(opt),
@@ -221,7 +248,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
                     const SizedBox(height: 8),
                     Text(
                       question['explanation'],
-                      style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                      style: const TextStyle(color: Colors.white),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -239,7 +266,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
                     onPressed: answered ? nextQuestion : null,
                     child: Text(
                       currentQuestionIndex == questions.length - 1 ? 'Finalizar' : 'Próxima',
-                      style: const TextStyle(fontSize: 18), // Aumenta a fonte
+                      style: const TextStyle(fontSize: 18),
                     ),
                   ),
                 ),
