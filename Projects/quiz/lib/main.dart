@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: const ColorScheme.light(
           primary: Color(0xFFFFD700), // Amarelo dourado
-          secondary: Color(0xFF00FF00), // Verde
+          secondary: Color(0xFFFFD700), // Verde
           tertiary: Color(0xFF00A3E0), // Azul claro
           background: Color(0xFF0A1A2C), // Fundo azul escuro
           onBackground: Color(0xFFFFFFFF), // Texto branco

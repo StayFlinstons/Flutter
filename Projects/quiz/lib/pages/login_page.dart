@@ -118,30 +118,63 @@ class _LoginPageState extends State<LoginPage> {
                   : SizedBox(
                       width: 150,
                       height: 60,
-                      child: ElevatedButton(
-                        onPressed: _login,
-                        child: const Text(
-                          'Login',
-                          style: TextStyle(fontSize: 18), // Aumenta a fonte
-                        ),
+                      child: // Botão de Login com borda
+                Container(
+                  width: 150,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: const Color.fromARGB(255, 255, 238, 0), width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: _login,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
                       ),
+                      backgroundColor:  const Color(0xFF0A1A2C),
+                    ),
+                    child: const Text(
+                      'Login',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ),
+
                     ),
               const SizedBox(height: 10),
               SizedBox(
                 width: 150,
                 height: 60,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (_) => const QuizHomePage(userName: "Usuário Google")),
-                    );
-                  },
-                  child: const Text(
-                    'Login com Google',
-                    style: TextStyle(fontSize: 18), // Aumenta a fonte
+                child: // Botão de Login com Google com borda
+                Container(
+                  width: 150,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.red, width: 2),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (_) => const QuizHomePage(userName: "Usuário Google")),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      backgroundColor: const Color(0xFF0A1A2C),
+                      foregroundColor:  const Color.fromARGB(255, 255, 238, 0),
+                    ),
+                    child: const Text(
+                      'Login com Google',
+                      style: TextStyle(fontSize: 18),
+                    ),
                   ),
                 ),
+
               ),
             ],
           ),
