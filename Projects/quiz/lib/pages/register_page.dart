@@ -118,34 +118,27 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 20),
               _isLoading
                   ? const CircularProgressIndicator()
-                  : SizedBox(
+                  : Container(
                       width: 150,
                       height: 60,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: const Color.fromARGB(255, 255, 238, 0), width: 2),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                       child: ElevatedButton(
                         onPressed: _register,
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          backgroundColor: const Color(0xFF0A1A2C),
+                        ),
                         child: const Text(
                           'Registrar',
-                          style: TextStyle(fontSize: 18), // Aumenta a fonte
+                          style: TextStyle(fontSize: 18),
                         ),
                       ),
                     ),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: 150,
-                height: 60,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (_) => const LoginPage()),
-                    );
-                  },
-                  child: const Text(
-                    'Registrar com Google',
-                    style: TextStyle(fontSize: 18), // Aumenta a fonte
-                  ),
-                ),
-              ),
             ],
           ),
         ),

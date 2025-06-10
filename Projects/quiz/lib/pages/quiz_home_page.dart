@@ -47,9 +47,13 @@ class _QuizHomePageState extends State<QuizHomePage> {
                 fit: BoxFit.contain,
               ),
               const SizedBox(height: 40),
-              SizedBox(
+              Container(
                 width: 150,
                 height: 60,
+                 decoration: BoxDecoration(
+                    border: Border.all(color: const Color.fromARGB(255, 255, 238, 0), width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -58,6 +62,12 @@ class _QuizHomePageState extends State<QuizHomePage> {
                           builder: (_) => const QuizModeSelectionPage()),
                     );
                   },
+                   style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      backgroundColor: const Color(0xFF0A1A2C),
+                    ),
                   child: const Text(
                     'Jogar',
                     style: TextStyle(fontSize: 18),
@@ -65,9 +75,13 @@ class _QuizHomePageState extends State<QuizHomePage> {
                 ),
               ),
               const SizedBox(height: 20),
-              SizedBox(
+               Container(
                 width: 150,
                 height: 60,
+                 decoration: BoxDecoration(
+                    border: Border.all(color: const Color.fromARGB(255, 255, 238, 0), width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -75,6 +89,12 @@ class _QuizHomePageState extends State<QuizHomePage> {
                       MaterialPageRoute(builder: (_) => const RankingPage()),
                     );
                   },
+                   style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      backgroundColor: const Color(0xFF0A1A2C),
+                    ),
                   child: const Text(
                     'Ranking',
                     style: TextStyle(fontSize: 18),

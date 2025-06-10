@@ -54,9 +54,13 @@ class _QuizModeSelectionPageState extends State<QuizModeSelectionPage> {
                       .toList(),
                 ),
                 const SizedBox(height: 30),
-                SizedBox(
+                Container(
                   width: 150,
                   height: 60,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: const Color.fromARGB(255, 255, 238, 0), width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(
@@ -66,6 +70,12 @@ class _QuizModeSelectionPageState extends State<QuizModeSelectionPage> {
                         ),
                       ));
                     },
+                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      backgroundColor: const Color(0xFF0A1A2C),
+                    ),
                     child: const Text(
                       'Iniciar Quiz',
                       style: TextStyle(fontSize: 18),
